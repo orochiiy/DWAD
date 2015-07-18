@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="DWAD_Project.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link href="Styles/main.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+
+        }
+        ul#test {
+            list-style-position: none;
+        }
+
+        ul#test li{
+            width: 125px;
+            text-align: center;
+            position: relative;
+            float: left;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test">
+            <ul>
+                <li><a href="#">test1</a>
+                    <ul>
+                    <li><a href="#">test1.1</a></li>
+                    <li><a href="#">test1.2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">test2</a></li>
+                <li><a href="#">test3</a></li>
+            </ul>
+        </div>
+    <form id="form1" runat="server">
+        <img alt="" class="auto-style1" src="Images/SMS%20Logo.PNG" />
+    <div class ="wrapper">
+        <div class ="menu">
+            <ul>
+                <li><a href="Default.aspx" id="btnHome" aria-autocomplete="none">Home</a></li>
+                <li><a href="#" id="btnProducts">Products</a>
+                    
+                </li>
+                <li><a href="#" id="btnContactUs">Contact Us</a></li>
+                <li><a href="#" id="btnAboutUs">About Us</a></li>
+                <li><a href="#" id="btnLogin">Login</a></li>
+                <li><a href="#" id="btnSignUp">Sign Up</a></li>
+                <li><a href="#" id="btnForum">Forum</a></li>
+                <li><a href="#">Search:&nbsp;&nbsp;&nbsp; <asp:TextBox ID="TextBox1" runat="server" BorderColor="White" BorderStyle="Solid" Width="375px"></asp:TextBox></a></li>
+                
+            </ul>
+        </div>
+        
+        <div class="clear"></div>
+        <div class="content">
+        <asp:ContentPlaceHolder ID="contentBody" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="clear"></div>
+        <div class="footer"><h2>Copyright@ABC.com</h2></div>
+
+    </div>
+    </form>
+</body>
+</html>
